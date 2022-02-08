@@ -1,0 +1,6 @@
+{
+    "require": {
+        "foostart/package-acl": "^2022.02",
+        "foostart/package-slideshow": "^2022.02"
+    }
+}
