@@ -179,6 +179,10 @@ return [
 
         Foostart\Acl\Authentication\AuthenticationServiceProvider::class,
         Foostart\Category\CategoryServiceProvider::class,
+        Foostart\Post\PostServiceProvider::class,
+        Foostart\Slideshow\SlideshowServiceProvider::class,
+        Foostart\Pexcel\PexcelServiceProvider::class,
+        Maatwebsite\Excel\ExcelServiceProvider::class,
 
     ],
 
@@ -195,6 +199,7 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // ...
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
     ])->toArray(),
 
 ];

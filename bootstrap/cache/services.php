@@ -39,6 +39,10 @@
     35 => 'App\\Providers\\RouteServiceProvider',
     36 => 'Foostart\\Acl\\Authentication\\AuthenticationServiceProvider',
     37 => 'Foostart\\Category\\CategoryServiceProvider',
+    38 => 'Foostart\\Post\\PostServiceProvider',
+    39 => 'Foostart\\Slideshow\\SlideshowServiceProvider',
+    40 => 'Foostart\\Pexcel\\PexcelServiceProvider',
+    41 => 'Maatwebsite\\Excel\\ExcelServiceProvider',
   ),
   'eager' => 
   array (
@@ -65,6 +69,10 @@
     20 => 'App\\Providers\\RouteServiceProvider',
     21 => 'Foostart\\Acl\\Authentication\\AuthenticationServiceProvider',
     22 => 'Foostart\\Category\\CategoryServiceProvider',
+    23 => 'Foostart\\Post\\PostServiceProvider',
+    24 => 'Foostart\\Slideshow\\SlideshowServiceProvider',
+    25 => 'Foostart\\Pexcel\\PexcelServiceProvider',
+    26 => 'Maatwebsite\\Excel\\ExcelServiceProvider',
   ),
   'deferred' => 
   array (
