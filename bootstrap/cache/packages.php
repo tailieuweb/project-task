@@ -1,9 +1,42 @@
 <?php return array (
+  'foostart/package-collectivehtml' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Collective\\Html\\HtmlServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'Form' => 'Collective\\Html\\FormFacade',
+      'Html' => 'Collective\\Html\\HtmlFacade',
+    ),
+  ),
+  'foostart/package-filemanager' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Foostart\\Filemanager\\FilemanagerServiceProvider',
+    ),
+    'aliases' => 
+    array (
+    ),
+  ),
   'fruitcake/laravel-cors' => 
   array (
     'providers' => 
     array (
       0 => 'Fruitcake\\Cors\\CorsServiceProvider',
+    ),
+  ),
+  'intervention/image' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Intervention\\Image\\ImageServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'Image' => 'Intervention\\Image\\Facades\\Image',
     ),
   ),
   'laravel/sail' => 
