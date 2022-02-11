@@ -89,6 +89,9 @@ return [
         'add' => 'Add',
         'save' => 'Save',
         'delete' => 'Delete',
+        'add_member' => 'Add member',
+        'add_all_member' => 'Add all',
+        'reset_invited' => 'Reset',
     ],
 
 
@@ -136,6 +139,9 @@ return [
         'not-found' => 'Not found items',
         'config' => 'List of configurations',
         'lang' => 'List of languages',
+        'slug' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+        'status' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+        'invite_member' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
     ],
 
 
@@ -198,6 +204,8 @@ return [
         'title-search' => 'Search task',
         'title-backup' => 'Backups',
         'config' => 'Configurations',
+        'slug' => 'Task slug',
+        'invite_member' => 'Invite members',
     ],
 
 
@@ -217,7 +225,7 @@ return [
         'menu_1' => 'Basic',
         'menu_2' => 'Advance',
         'menu_3' => 'Other',
-        'menu_4' => 'Menu 4',
+        'menu_4' => 'Assignee',
         'menu_5' => 'Menu 5',
         'menu_6' => 'Menu 6',
         'menu_7' => 'Menu 7',
