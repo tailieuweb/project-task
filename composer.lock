@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e6377f81fb62c77b0172db0136558760",
+    "content-hash": "00acd580ee94ce19945405f1cb5e7113",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1010,6 +1010,48 @@
                 "source": "https://github.com/foostart/package-slideshow/tree/2022.02.09"
             },
             "time": "2021-09-06T14:30:26+00:00"
+        },
+        {
+            "name": "foostart/package-task",
+            "version": "2022.02.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/foostart/package-task.git",
+                "reference": "a179e0278e42b2576fc41bfb92437f5e546fe9e0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/foostart/package-task/zipball/a179e0278e42b2576fc41bfb92437f5e546fe9e0",
+                "reference": "a179e0278e42b2576fc41bfb92437f5e546fe9e0",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Foostart\\Task\\": "/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "FooStart",
+                    "email": "foostart.com@gmail.com",
+                    "homepage": "http://foostart.com"
+                }
+            ],
+            "description": "Create overview task can intergrate other project",
+            "keywords": [
+                "foostart",
+                "laravel 5 package task"
+            ],
+            "support": {
+                "issues": "https://github.com/foostart/package-task/issues",
+                "source": "https://github.com/foostart/package-task/tree/master"
+            },
+            "time": "2018-04-23T16:40:42+00:00"
         },
         {
             "name": "fruitcake/laravel-cors",

@@ -186,6 +186,7 @@ return [
         Intervention\Image\ImageServiceProvider::class,
         Foostart\Pexcel\PexcelServiceProvider::class,
         Maatwebsite\Excel\ExcelServiceProvider::class,
+        Foostart\Task\TaskServiceProvider::class,
 
     ],
 
