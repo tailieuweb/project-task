@@ -20,3 +20,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::post('/login', 'App\Http\Controllers\Auth\UserAuthController@login');
+
+Route::middleware(['auth:api'])->group(function () {
+
+    Route::get('/tasks', 'Foostart\Task\Controllers\User\TaskUserController@index');
+    Route::get('/task', 'Foostart\Task\Controllers\User\TaskUserController@view');
+});
+

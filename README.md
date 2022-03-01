@@ -1,1 +1,13 @@
 # project-task
+
+
+CREATE DATABASE project_task CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=thaobua
+DB_USERNAME=root
+DB_PASSWORD=ThaoBua*@db.tdc@2021
+DB_SAMPLE_TEST=100
