@@ -25,5 +25,6 @@ Route::middleware(['auth:api'])->group(function () {
 
     Route::get('/tasks', 'Foostart\Task\Controllers\User\TaskUserController@index');
     Route::get('/task', 'Foostart\Task\Controllers\User\TaskUserController@view');
+    Route::post('/task', 'Foostart\Task\Controllers\User\TaskUserController@mobilePost');
 });
 
