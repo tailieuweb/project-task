@@ -112,6 +112,8 @@ return [
         'sorting' => 'Sorting',
         'no-selected' => 'No selected',
         'status' => 'Status',
+        'task_size' => 'Task size',
+        'task_priority' => 'Task priority',
     ],
 
 
@@ -127,6 +129,8 @@ return [
     */
     'descriptions' => [
         'form' => 'Task form',
+        'task_size' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+        'task_priority' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
         'notes' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
         'update' => 'Update task',
         'name' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',

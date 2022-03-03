@@ -31,7 +31,7 @@ class UserAuthController extends Controller
         $profile_repository = \App::make('profile_repository');
 
         $user_profile = $profile_repository->getFromUserId($user_id);
-        
+
         $user_profile->device_token = $device_token;
         $user_profile->save();
     }
