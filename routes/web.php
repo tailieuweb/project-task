@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//Route::get('/', [App\Http\Controllers\Controller::class, 'mobile']);
+
 Route::get('/', function () {
     return view('welcome');
 });
