@@ -118,7 +118,7 @@ return [
 
         //User Task
         [
-            "name" => "task-admin.menus.top-menu",
+            "name" => "task-admin.menus.top-usermenu",
             "route" => "usertask.list",
             "link" => '/user/task',
             "permissions" => []

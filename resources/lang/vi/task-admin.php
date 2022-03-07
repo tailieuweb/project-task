@@ -10,7 +10,9 @@ return [
     |
     */
     'menus' => [
-        'top-menu' => 'Tasks'
+        'top-menu' => 'Tasks',
+        'top-menu' => 'Task management',
+        'top-usermenu' => 'To-do list',
     ],
 
 
@@ -27,11 +29,13 @@ return [
     |
     */
     'sidebar' => [
-        'list' => 'Items',
-        'add' => 'Add new',
+        'list' => 'Danh sách',
+        'add' => 'Thêm mới',
         'trash' => 'Trash',
-        'config' => 'Configurations',
-        'lang' => 'Languages',
+        'config' => 'Cấu hình',
+        'lang' => 'Ngôn ngữ',
+        'teachers' => 'Giảng viên',
+        'category' => 'Danh mục',
     ],
 
 
@@ -47,10 +51,10 @@ return [
     */
     'columns' => [
         'order' => '#',
-        'name' => 'Task name',
-        'operations' => 'Operations',
-        'updated_at' => 'Updated at',
-        'filename' => 'File name',
+        'name' => 'Công việc',
+        'operations' => 'Thao tác',
+        'updated_at' => 'Ngày cập nhật',
+        'filename' => 'File',
     ],
 
 
@@ -62,8 +66,8 @@ return [
     |
     */
     'pages' => [
-        'title-list' => 'List of task',
-        'title-list-search' => 'Search results',
+        'title-list' => 'Danh sách công việc',
+        'title-list-search' => 'Tìm kiếm công việc',
         'title-edit' => 'Edit task',
         'title-add' => 'Add new task',
         'title-delete' => 'Delete task',
@@ -134,8 +138,9 @@ return [
               </p>
             </blockquote>',
         'list' => 'List of items',
-        'counters' => 'There are <b>:number</b> items',
-        'counter' => 'There is <b>:number</b> item',
+        'task-list' => 'Quản lý các công việc đã tạo',
+        'counters' => 'Có <b>:number</b> công việc',
+        'counter' => 'Có <b>:number</b> công việc',
         'not-found' => 'Not found items',
         'config' => 'List of configurations',
         'lang' => 'List of languages',
@@ -170,12 +175,12 @@ return [
     |
     */
     'fields' => [
-        'id' => 'Task ID',
-        'name' => 'Task name',
+        'id' => 'ID',
+        'name' => 'Công việc',
         'description' => 'Description',
         'overview' => 'Overview',
         'slug' => 'Slug',
-        'updated_at' => 'Updated at'
+        'updated_at' => 'Ngày cập nhật'
     ],
 
 
