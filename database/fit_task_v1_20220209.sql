@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 10, 2022 at 09:07 AM
+-- Generation Time: Mar 10, 2022 at 09:37 AM
 -- Server version: 10.4.19-MariaDB-log
 -- PHP Version: 8.0.7
 
@@ -52,10 +52,15 @@ CREATE TABLE `categories` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
+-- Truncate table before insert `categories`
+--
+
+TRUNCATE TABLE `categories`;
+--
 -- Dumping data for table `categories`
 --
 
-INSERT INTO `categories` (`category_id`, `context_id`, `category_id_parent`, `category_id_parent_str`, `category_id_child_str`, `category_name`, `category_order`, `category_slug`, `category_url`, `category_icon`, `category_overview`, `category_description`, `category_image`, `status`, `sequence`, `created_user_id`, `updated_user_id`, `deleted_at`, `created_at`, `updated_at`) VALUES
+INSERT DELAYED IGNORE INTO `categories` (`category_id`, `context_id`, `category_id_parent`, `category_id_parent_str`, `category_id_child_str`, `category_name`, `category_order`, `category_slug`, `category_url`, `category_icon`, `category_overview`, `category_description`, `category_image`, `status`, `sequence`, `created_user_id`, `updated_user_id`, `deleted_at`, `created_at`, `updated_at`) VALUES
 (1, 1, NULL, NULL, NULL, 'Student', 1, 'student', '1', '1', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>', NULL, NULL, NULL, 1, 1, NULL, '2022-03-02 02:38:00', '2022-03-02 02:38:00'),
 (2, 1, NULL, NULL, NULL, 'Teacher', 1, 'teacher', '1', '1', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>', NULL, NULL, NULL, 1, 1, NULL, '2022-03-02 02:38:19', '2022-03-02 02:38:19'),
 (3, 5, NULL, NULL, NULL, 'Ôn luyện thi', 1, 'on-luyen-thi', '1', '1', 'Tổ chức thi Lập trình viên website giỏi cấp trường', '<p>Tổ chức thi Lập tr&igrave;nh vi&ecirc;n website giỏi cấp trường</p>', NULL, NULL, NULL, 1, 1, NULL, '2022-03-03 00:08:19', '2022-03-03 00:08:19'),
@@ -87,10 +92,15 @@ CREATE TABLE `contexts` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
+-- Truncate table before insert `contexts`
+--
+
+TRUNCATE TABLE `contexts`;
+--
 -- Dumping data for table `contexts`
 --
 
-INSERT INTO `contexts` (`context_id`, `context_name`, `context_ref`, `context_key`, `context_slug`, `context_notes`, `status`, `sequence`, `created_user_id`, `updated_user_id`, `deleted_at`, `created_at`, `updated_at`) VALUES
+INSERT DELAYED IGNORE INTO `contexts` (`context_id`, `context_name`, `context_ref`, `context_key`, `context_slug`, `context_notes`, `status`, `sequence`, `created_user_id`, `updated_user_id`, `deleted_at`, `created_at`, `updated_at`) VALUES
 (1, 'User level', 'user/level', 'ab7e417e2dddc5e5240b586d454e', NULL, NULL, 99, NULL, 1, 1, NULL, '2022-03-02 02:23:26', '2022-03-02 02:23:26'),
 (2, 'User department', 'user/department', 'ab7e417e2dddc5e5240b586d454f', NULL, NULL, 99, NULL, 1, 1, NULL, '2022-03-02 02:23:26', '2022-03-02 02:23:26'),
 (3, 'Admin posts', 'admin/posts', 'ab7e417e2dddc5240b586d454e', NULL, NULL, 99, NULL, 1, 1, NULL, '2022-03-02 02:23:26', '2022-03-02 02:23:26'),
@@ -114,6 +124,11 @@ CREATE TABLE `failed_jobs` (
   `failed_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Truncate table before insert `failed_jobs`
+--
+
+TRUNCATE TABLE `failed_jobs`;
 -- --------------------------------------------------------
 
 --
@@ -136,10 +151,15 @@ CREATE TABLE `groups` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
+-- Truncate table before insert `groups`
+--
+
+TRUNCATE TABLE `groups`;
+--
 -- Dumping data for table `groups`
 --
 
-INSERT INTO `groups` (`id`, `name`, `permissions`, `protected`, `status`, `sequence`, `created_user_id`, `updated_user_id`, `deleted_at`, `created_at`, `updated_at`) VALUES
+INSERT DELAYED IGNORE INTO `groups` (`id`, `name`, `permissions`, `protected`, `status`, `sequence`, `created_user_id`, `updated_user_id`, `deleted_at`, `created_at`, `updated_at`) VALUES
 (1, 'superadmin', '{\"_superadmin\":1}', 0, NULL, NULL, NULL, NULL, NULL, '2022-03-02 02:23:24', '2022-03-02 02:23:24'),
 (2, 'editor', '{\"_user-editor\":1,\"_group-editor\":1}', 0, NULL, NULL, NULL, NULL, NULL, '2022-03-02 02:23:24', '2022-03-02 02:23:24'),
 (3, 'base admin', '{\"_user-editor\":1}', 0, NULL, NULL, NULL, NULL, NULL, '2022-03-02 02:23:24', '2022-03-02 02:23:24');
@@ -158,10 +178,15 @@ CREATE TABLE `migrations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
+-- Truncate table before insert `migrations`
+--
+
+TRUNCATE TABLE `migrations`;
+--
 -- Dumping data for table `migrations`
 --
 
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
+INSERT DELAYED IGNORE INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (1, '2016_06_01_000001_create_oauth_auth_codes_table', 1),
 (2, '2016_06_01_000002_create_oauth_access_tokens_table', 1),
 (3, '2016_06_01_000003_create_oauth_refresh_tokens_table', 1),
@@ -207,16 +232,23 @@ CREATE TABLE `oauth_access_tokens` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
+-- Truncate table before insert `oauth_access_tokens`
+--
+
+TRUNCATE TABLE `oauth_access_tokens`;
+--
 -- Dumping data for table `oauth_access_tokens`
 --
 
-INSERT INTO `oauth_access_tokens` (`id`, `user_id`, `client_id`, `name`, `scopes`, `revoked`, `created_at`, `updated_at`, `expires_at`) VALUES
+INSERT DELAYED IGNORE INTO `oauth_access_tokens` (`id`, `user_id`, `client_id`, `name`, `scopes`, `revoked`, `created_at`, `updated_at`, `expires_at`) VALUES
 ('0037c1cdf95a41ac283cabb036ec607888e132a6bbba1ffaedf2df3e59429e2b35721d221bb406a6', 1, 1, 'API Token', '[]', 0, '2022-03-02 23:32:47', '2022-03-02 23:32:47', '2023-03-03 06:32:47'),
 ('16c11d6616a5b0673408043cfa3067301ae8cfe176ad315b14b1f057ddb57e9d23e6f93304028cd1', 1, 1, 'API Token', '[]', 0, '2022-03-02 19:52:59', '2022-03-02 19:52:59', '2023-03-03 02:52:59'),
 ('1976724793df6043c4c82a918805212af6a1439e2620b681f1a38672b5088e0019aef5ab66f30853', 1, 1, 'API Token', '[]', 0, '2022-03-02 23:33:10', '2022-03-02 23:33:10', '2023-03-03 06:33:10'),
 ('24a1c554821f7851d9896d1cb6ad69f109fd049c7dae695ce9c35504610419ef885cd0fe63b2cf88', 1, 1, 'API Token', '[]', 0, '2022-03-02 22:26:18', '2022-03-02 22:26:18', '2023-03-03 05:26:18'),
 ('49d921b8e0813bd1ab553dc36e33603d4cd5ea441fd24f0fe0dc8b9b82ec1ebdb5ad5bb3ff364a11', 1, 1, 'API Token', '[]', 0, '2022-03-02 23:32:29', '2022-03-02 23:32:29', '2023-03-03 06:32:29'),
-('6ed531b79634cbf1f8aa1ed3ab25f3bc43ab3fa81ed6ee1ece711fab89a45840b31ab9413b128d64', 1, 1, 'API Token', '[]', 0, '2022-03-02 22:25:54', '2022-03-02 22:25:54', '2023-03-03 05:25:54');
+('6ed531b79634cbf1f8aa1ed3ab25f3bc43ab3fa81ed6ee1ece711fab89a45840b31ab9413b128d64', 1, 1, 'API Token', '[]', 0, '2022-03-02 22:25:54', '2022-03-02 22:25:54', '2023-03-03 05:25:54'),
+('835e04c41548d13f24f48eec67a9323902370ec2d6660eff257d86c76fe9211f5a2afc5775ca3d7b', 1, 1, 'API Token', '[]', 0, '2022-03-10 01:36:57', '2022-03-10 01:36:57', '2023-03-10 08:36:57'),
+('e09fb5126061ec989834f00663fed97475d0c52a92fb6816969e482106549ce03dc34f4274641eb1', 1, 1, 'API Token', '[]', 0, '2022-03-10 01:34:14', '2022-03-10 01:34:14', '2023-03-10 08:34:14');
 
 -- --------------------------------------------------------
 
@@ -234,6 +266,11 @@ CREATE TABLE `oauth_auth_codes` (
   `expires_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Truncate table before insert `oauth_auth_codes`
+--
+
+TRUNCATE TABLE `oauth_auth_codes`;
 -- --------------------------------------------------------
 
 --
@@ -256,10 +293,15 @@ CREATE TABLE `oauth_clients` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
+-- Truncate table before insert `oauth_clients`
+--
+
+TRUNCATE TABLE `oauth_clients`;
+--
 -- Dumping data for table `oauth_clients`
 --
 
-INSERT INTO `oauth_clients` (`id`, `user_id`, `name`, `secret`, `provider`, `redirect`, `personal_access_client`, `password_client`, `revoked`, `created_at`, `updated_at`) VALUES
+INSERT DELAYED IGNORE INTO `oauth_clients` (`id`, `user_id`, `name`, `secret`, `provider`, `redirect`, `personal_access_client`, `password_client`, `revoked`, `created_at`, `updated_at`) VALUES
 (1, NULL, 'Laravel Personal Access Client', 'koyVDZW8CRQdFWZsZFZvptjBl9o6m7ArdaBGAjgA', NULL, 'http://localhost', 1, 0, 0, '2022-03-02 19:52:50', '2022-03-02 19:52:50'),
 (2, NULL, 'Laravel Password Grant Client', 'pFxogmKNodpz47k3iZQgLkXOCy5OBTunFYBqP1p2', 'users', 'http://localhost', 0, 1, 0, '2022-03-02 19:52:50', '2022-03-02 19:52:50');
 
@@ -278,10 +320,15 @@ CREATE TABLE `oauth_personal_access_clients` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
+-- Truncate table before insert `oauth_personal_access_clients`
+--
+
+TRUNCATE TABLE `oauth_personal_access_clients`;
+--
 -- Dumping data for table `oauth_personal_access_clients`
 --
 
-INSERT INTO `oauth_personal_access_clients` (`id`, `client_id`, `created_at`, `updated_at`) VALUES
+INSERT DELAYED IGNORE INTO `oauth_personal_access_clients` (`id`, `client_id`, `created_at`, `updated_at`) VALUES
 (1, 1, '2022-03-02 19:52:50', '2022-03-02 19:52:50');
 
 -- --------------------------------------------------------
@@ -298,6 +345,11 @@ CREATE TABLE `oauth_refresh_tokens` (
   `expires_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Truncate table before insert `oauth_refresh_tokens`
+--
+
+TRUNCATE TABLE `oauth_refresh_tokens`;
 -- --------------------------------------------------------
 
 --
@@ -317,6 +369,11 @@ CREATE TABLE `password_resets` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Truncate table before insert `password_resets`
+--
+
+TRUNCATE TABLE `password_resets`;
 -- --------------------------------------------------------
 
 --
@@ -341,10 +398,15 @@ CREATE TABLE `permission` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
+-- Truncate table before insert `permission`
+--
+
+TRUNCATE TABLE `permission`;
+--
 -- Dumping data for table `permission`
 --
 
-INSERT INTO `permission` (`id`, `category_id`, `name`, `permission`, `protected`, `description`, `status`, `sequence`, `created_user_id`, `updated_user_id`, `deleted_at`, `created_at`, `updated_at`) VALUES
+INSERT DELAYED IGNORE INTO `permission` (`id`, `category_id`, `name`, `permission`, `protected`, `description`, `status`, `sequence`, `created_user_id`, `updated_user_id`, `deleted_at`, `created_at`, `updated_at`) VALUES
 (1, NULL, 'superadmin', '_superadmin', 0, NULL, NULL, NULL, NULL, NULL, NULL, '2022-03-02 02:23:23', '2022-03-02 02:23:23'),
 (2, NULL, 'user editor', '_user-editor', 0, NULL, NULL, NULL, NULL, NULL, NULL, '2022-03-02 02:23:23', '2022-03-02 02:23:23'),
 (3, NULL, 'group editor', '_group-editor', 0, NULL, NULL, NULL, NULL, NULL, NULL, '2022-03-02 02:23:23', '2022-03-02 02:23:23'),
@@ -370,6 +432,11 @@ CREATE TABLE `personal_access_tokens` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Truncate table before insert `personal_access_tokens`
+--
+
+TRUNCATE TABLE `personal_access_tokens`;
 -- --------------------------------------------------------
 
 --
@@ -394,6 +461,11 @@ CREATE TABLE `pexcels` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Truncate table before insert `pexcels`
+--
+
+TRUNCATE TABLE `pexcels`;
 -- --------------------------------------------------------
 
 --
@@ -424,6 +496,11 @@ CREATE TABLE `posts` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Truncate table before insert `posts`
+--
+
+TRUNCATE TABLE `posts`;
 -- --------------------------------------------------------
 
 --
@@ -445,6 +522,11 @@ CREATE TABLE `profile_field` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Truncate table before insert `profile_field`
+--
+
+TRUNCATE TABLE `profile_field`;
 -- --------------------------------------------------------
 
 --
@@ -464,6 +546,11 @@ CREATE TABLE `profile_field_type` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Truncate table before insert `profile_field_type`
+--
+
+TRUNCATE TABLE `profile_field_type`;
 -- --------------------------------------------------------
 
 --
@@ -489,6 +576,11 @@ CREATE TABLE `slideshows` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Truncate table before insert `slideshows`
+--
+
+TRUNCATE TABLE `slideshows`;
 -- --------------------------------------------------------
 
 --
@@ -513,6 +605,11 @@ CREATE TABLE `slideshow_styles` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Truncate table before insert `slideshow_styles`
+--
+
+TRUNCATE TABLE `slideshow_styles`;
 -- --------------------------------------------------------
 
 --
@@ -547,10 +644,15 @@ CREATE TABLE `tasks` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
+-- Truncate table before insert `tasks`
+--
+
+TRUNCATE TABLE `tasks`;
+--
 -- Dumping data for table `tasks`
 --
 
-INSERT INTO `tasks` (`task_id`, `category_id`, `task_name`, `task_start_date`, `task_end_date`, `task_size`, `task_priority`, `task_order`, `task_slug`, `task_overview`, `task_description`, `task_image`, `task_files`, `task_cache_comments`, `task_cache_other_posts`, `task_cache_time`, `status`, `sequence`, `created_user_id`, `updated_user_id`, `deleted_at`, `created_at`, `updated_at`) VALUES
+INSERT DELAYED IGNORE INTO `tasks` (`task_id`, `category_id`, `task_name`, `task_start_date`, `task_end_date`, `task_size`, `task_priority`, `task_order`, `task_slug`, `task_overview`, `task_description`, `task_image`, `task_files`, `task_cache_comments`, `task_cache_other_posts`, `task_cache_time`, `status`, `sequence`, `created_user_id`, `updated_user_id`, `deleted_at`, `created_at`, `updated_at`) VALUES
 (1, 4, 'Họp trực tuyến với Freesia', '2022-02-17', '2022-02-17', 1, 3, NULL, 'hop-truc-tuyen-voi-freesia', 'Họp trực tuyến với Freesia có BGH tham dự', '<p>Tham gia bu&ocirc;̉i họp tại h&ocirc;̣i trường B, GV Khoa CNTT tham gia đ&acirc;̀y đủ</p>\r\n<p>Bu&ocirc;̉i họp có BGH tham dự</p>', NULL, '[]', NULL, NULL, NULL, 99, NULL, 1, 1, NULL, '2022-03-03 20:22:07', '2022-03-07 00:55:44'),
 (2, 6, 'Cập nhật chương trình đào tạo ngành CNTT thường năm 2022', '2022-03-13', '2022-03-16', 1, 1, NULL, 'cap-nhat-chuong-trinh-dao-tao-nganh-cntt-thuong-nam-2022', '222222222222222222222222', '<p>222222222222222222222222</p>', NULL, NULL, NULL, NULL, NULL, 3, NULL, 2, 2, NULL, '2022-03-03 20:27:17', '2022-03-07 02:50:06'),
 (3, NULL, 'Xử lý hồ sơ thực tập doanh nghiệp', '2022-01-01', '2022-01-20', 1, 2, NULL, 'xu-ly-ho-so-thuc-tap-doanh-nghiep', '222222222222222222222222', '<p>222222222222222222222222</p>', NULL, '[]', NULL, NULL, NULL, 99, NULL, 1, 1, NULL, '2022-03-06 21:43:53', '2022-03-06 21:44:41'),
@@ -580,10 +682,15 @@ CREATE TABLE `task_user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
+-- Truncate table before insert `task_user`
+--
+
+TRUNCATE TABLE `task_user`;
+--
 -- Dumping data for table `task_user`
 --
 
-INSERT INTO `task_user` (`assignee_id`, `user_id`, `task_id`, `notes`, `status`, `sequence`, `created_user_id`, `updated_user_id`, `deleted_at`, `created_at`, `updated_at`) VALUES
+INSERT DELAYED IGNORE INTO `task_user` (`assignee_id`, `user_id`, `task_id`, `notes`, `status`, `sequence`, `created_user_id`, `updated_user_id`, `deleted_at`, `created_at`, `updated_at`) VALUES
 (1, 2, 1, 'vắng', 4, NULL, 2, 2, '2022-03-10 00:38:18', '2022-03-03 20:22:07', '2022-03-10 00:38:18'),
 (2, 3, 1, NULL, 99, NULL, 3, 3, '2022-03-10 00:38:18', '2022-03-03 20:22:07', '2022-03-10 00:38:18'),
 (3, 2, 2, '222222222222222222222', 3, NULL, 2, 2, NULL, '2022-03-03 20:27:17', '2022-03-07 02:50:06'),
@@ -615,6 +722,11 @@ CREATE TABLE `throttle` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Truncate table before insert `throttle`
+--
+
+TRUNCATE TABLE `throttle`;
 -- --------------------------------------------------------
 
 --
@@ -646,11 +758,16 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
+-- Truncate table before insert `users`
+--
+
+TRUNCATE TABLE `users`;
+--
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `email`, `user_name`, `password`, `permissions`, `activated`, `banned`, `activation_code`, `activated_at`, `last_login`, `persist_code`, `reset_password_code`, `protected`, `status`, `sequence`, `created_user_id`, `updated_user_id`, `deleted_at`, `created_at`, `updated_at`) VALUES
-(1, 'ptnhuan@gmail.com', 'ptnhuan', '$2y$10$b0spyewY6I3KejkSFKP8jON67EohAocQuc/7DSd.m.0.q3l/zxTGi', NULL, 1, 0, NULL, NULL, '2022-03-10 00:26:17', '$2y$10$8i0HeACKrlj6C/ERxvIiNeZpzZQBYHQbTdn/vYbJ6YBsi9Y6Zb6zG', NULL, 0, NULL, NULL, NULL, NULL, NULL, '2022-03-02 02:23:24', '2022-03-10 00:26:17'),
+INSERT DELAYED IGNORE INTO `users` (`id`, `email`, `user_name`, `password`, `permissions`, `activated`, `banned`, `activation_code`, `activated_at`, `last_login`, `persist_code`, `reset_password_code`, `protected`, `status`, `sequence`, `created_user_id`, `updated_user_id`, `deleted_at`, `created_at`, `updated_at`) VALUES
+(1, 'admin@admin.com', 'admin', '$2y$10$b0spyewY6I3KejkSFKP8jON67EohAocQuc/7DSd.m.0.q3l/zxTGi', NULL, 1, 0, NULL, NULL, '2022-03-10 00:26:17', '$2y$10$8i0HeACKrlj6C/ERxvIiNeZpzZQBYHQbTdn/vYbJ6YBsi9Y6Zb6zG', NULL, 0, NULL, NULL, NULL, NULL, NULL, '2022-03-02 02:23:24', '2022-03-10 00:26:17'),
 (2, 'ptnhuan@tdc.edu.vn', NULL, '$2y$10$VFsHXQN01utR3GdH/R..1u8aKGTdG8TcaecsaDzMZtmljHjOR/3gK', NULL, 1, 0, NULL, NULL, '2022-03-07 02:49:49', '$2y$10$sv8xOC.pbrJTreQJ7biWou5VVfqvD8jHgSnI1l6RKmBoZ6yxPqW.O', NULL, 0, NULL, NULL, NULL, NULL, NULL, '2022-03-02 02:37:17', '2022-03-07 02:49:49'),
 (3, 'thept@tdc.edu.vn', NULL, '$2y$10$2vCMlwqJFUCVaGYmLe9nW.Rg4VhcmVddQAsOSGhZwGNy/LHkgIxTu', NULL, 1, 0, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, '2022-03-02 02:39:09', '2022-03-02 02:39:09'),
 (4, 'cuongtk@tdc.edu.vn', NULL, '$2y$10$EDLlHy4YZChl2cbmKGe7teOly53FdwaxYvckzsx899q.H7FoyeH.a', NULL, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, '2022-03-07 00:39:13', '2022-03-07 00:39:13'),
@@ -687,10 +804,15 @@ CREATE TABLE `users_groups` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
+-- Truncate table before insert `users_groups`
+--
+
+TRUNCATE TABLE `users_groups`;
+--
 -- Dumping data for table `users_groups`
 --
 
-INSERT INTO `users_groups` (`user_id`, `group_id`, `status`, `sequence`, `created_user_id`, `updated_user_id`, `deleted_at`, `created_at`, `updated_at`) VALUES
+INSERT DELAYED IGNORE INTO `users_groups` (`user_id`, `group_id`, `status`, `sequence`, `created_user_id`, `updated_user_id`, `deleted_at`, `created_at`, `updated_at`) VALUES
 (1, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
@@ -727,11 +849,16 @@ CREATE TABLE `user_profile` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
+-- Truncate table before insert `user_profile`
+--
+
+TRUNCATE TABLE `user_profile`;
+--
 -- Dumping data for table `user_profile`
 --
 
-INSERT INTO `user_profile` (`id`, `user_id`, `first_name`, `last_name`, `phone`, `device_token`, `category_id`, `level_id`, `avatar`, `code`, `vat`, `state`, `city`, `country`, `sex`, `address`, `status`, `sequence`, `created_user_id`, `updated_user_id`, `deleted_at`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Admin', 'System', NULL, 'eow6lTobRh-ScVfa_ZRIhv:APA91bGuGqZ3X9B1yUSTKmkl8FZb483WBnHkDUb3iymMkPsgzxry1QTt8upSPg61NHmBG8Jfs_Q-kL6Uej_57lrZl4ekE6nr6ZQPriz5jGpIqt_EpEiAD_MSZCjPzJY2SAjisnUpGaf8', NULL, 2, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, '2022-03-02 02:23:25', '2022-03-02 22:26:18'),
+INSERT DELAYED IGNORE INTO `user_profile` (`id`, `user_id`, `first_name`, `last_name`, `phone`, `device_token`, `category_id`, `level_id`, `avatar`, `code`, `vat`, `state`, `city`, `country`, `sex`, `address`, `status`, `sequence`, `created_user_id`, `updated_user_id`, `deleted_at`, `created_at`, `updated_at`) VALUES
+(1, 1, 'Admin', 'System', NULL, 'eWZwPl9RSH-Ao7oGyx38-4:APA91bGTH0xn1pv7Q5GubUXLikfyApZBm73ET0hRZx-4Oi94izVbKJp                                                                                                             ZBJvEKbXW2BCqDUYXXIV1EBtAlPkXmHNLhj6YZ8rqNZT5h6oAQ2CNRmGbcIk7ALG3zcEhRE1OlpbAAAS', NULL, 2, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, '2022-03-02 02:23:25', '2022-03-10 01:34:12'),
 (2, 2, 'Phan Thanh', 'Nhuần', NULL, 'eow6lTobRh-ScVfa_ZRIhv:APA91bGuGqZ3X9B1yUSTKmkl8FZb483WBnHkDUb3iymMkPsgzxry1QTt8upSPg61NHmBG8Jfs_Q-kL6Uej_57lrZl4ekE6nr6ZQPriz5jGpIqt_EpEiAD_MSZCjPzJY2SAjisnUpGaf8', NULL, 2, NULL, 'admin', NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, '2022-03-02 02:37:17', '2022-03-02 19:48:21'),
 (3, 3, 'Phan Thị', 'Thể', NULL, 'eow6lTobRh-ScVfa_ZRIhv:APA91bGuGqZ3X9B1yUSTKmkl8FZb483WBnHkDUb3iymMkPsgzxry1QTt8upSPg61NHmBG8Jfs_Q-kL6Uej_57lrZl4ekE6nr6ZQPriz5jGpIqt_EpEiAD_MSZCjPzJY2SAjisnUpGaf8', NULL, 2, NULL, 'thept@tdc.edu.vn', NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, '2022-03-02 02:39:09', '2022-03-02 02:39:26'),
 (4, 4, 'Tiêu Kim', 'Cương', NULL, NULL, NULL, 2, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, '2022-03-07 00:39:13', '2022-03-07 00:39:13'),
