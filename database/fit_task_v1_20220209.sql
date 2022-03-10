@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 04, 2022 at 08:03 AM
+-- Generation Time: Mar 10, 2022 at 09:07 AM
 -- Server version: 10.4.19-MariaDB-log
 -- PHP Version: 8.0.7
 
@@ -551,8 +551,12 @@ CREATE TABLE `tasks` (
 --
 
 INSERT INTO `tasks` (`task_id`, `category_id`, `task_name`, `task_start_date`, `task_end_date`, `task_size`, `task_priority`, `task_order`, `task_slug`, `task_overview`, `task_description`, `task_image`, `task_files`, `task_cache_comments`, `task_cache_other_posts`, `task_cache_time`, `status`, `sequence`, `created_user_id`, `updated_user_id`, `deleted_at`, `created_at`, `updated_at`) VALUES
-(1, 4, '1111111111111111111111111111', '2022-03-01', '2022-03-04', 2, 2, NULL, '1111111111111111111111111111', '111111111111111111', '<p>1111111111111111111111</p>', NULL, NULL, NULL, NULL, NULL, 4, NULL, 2, 2, NULL, '2022-03-03 20:22:07', '2022-03-03 23:41:32'),
-(2, 6, '222222222222222222', '2022-03-13', '2022-03-16', 1, 1, NULL, '222222222222222222', '222222222222222222222222', '<p>222222222222222222222222</p>', NULL, NULL, NULL, NULL, NULL, 99, NULL, NULL, NULL, NULL, '2022-03-03 20:27:17', '2022-03-03 20:27:17');
+(1, 4, 'Họp trực tuyến với Freesia', '2022-02-17', '2022-02-17', 1, 3, NULL, 'hop-truc-tuyen-voi-freesia', 'Họp trực tuyến với Freesia có BGH tham dự', '<p>Tham gia bu&ocirc;̉i họp tại h&ocirc;̣i trường B, GV Khoa CNTT tham gia đ&acirc;̀y đủ</p>\r\n<p>Bu&ocirc;̉i họp có BGH tham dự</p>', NULL, '[]', NULL, NULL, NULL, 99, NULL, 1, 1, NULL, '2022-03-03 20:22:07', '2022-03-07 00:55:44'),
+(2, 6, 'Cập nhật chương trình đào tạo ngành CNTT thường năm 2022', '2022-03-13', '2022-03-16', 1, 1, NULL, 'cap-nhat-chuong-trinh-dao-tao-nganh-cntt-thuong-nam-2022', '222222222222222222222222', '<p>222222222222222222222222</p>', NULL, NULL, NULL, NULL, NULL, 3, NULL, 2, 2, NULL, '2022-03-03 20:27:17', '2022-03-07 02:50:06'),
+(3, NULL, 'Xử lý hồ sơ thực tập doanh nghiệp', '2022-01-01', '2022-01-20', 1, 2, NULL, 'xu-ly-ho-so-thuc-tap-doanh-nghiep', '222222222222222222222222', '<p>222222222222222222222222</p>', NULL, '[]', NULL, NULL, NULL, 99, NULL, 1, 1, NULL, '2022-03-06 21:43:53', '2022-03-06 21:44:41'),
+(4, NULL, 'Xử lý/import hồ sơ thực tập tốt nghiệp', '2022-01-01', '2022-01-20', 1, 2, NULL, 'xu-ly-ho-so-thuc-tap-doanh-nghiep', '222222222222222222222222', '<p>222222222222222222222222</p>', NULL, '[]', NULL, NULL, NULL, 99, NULL, 1, 1, NULL, '2022-03-06 21:44:59', '2022-03-06 21:44:59'),
+(5, NULL, 'Hội đồng xét duyệt đề cương NCKH của SV 2021-2022', '2022-01-01', '2022-01-20', 1, 2, NULL, 'xu-ly-ho-so-thuc-tap-doanh-nghiep', '222222222222222222222222', '<p>222222222222222222222222</p>', NULL, '[]', NULL, NULL, NULL, 99, NULL, 1, 1, NULL, '2022-03-06 21:45:06', '2022-03-06 21:45:06'),
+(6, NULL, 'Thực hiện đề tài NCKH 21-22', '2022-01-01', '2022-01-20', 1, 2, NULL, 'thuc-hien-de-tai-nckh-21-22', '222222222222222222222222', '<p>222222222222222222222222</p>', NULL, '[]', NULL, NULL, NULL, 99, NULL, 1, 1, NULL, '2022-03-06 21:45:13', '2022-03-06 21:45:13');
 
 -- --------------------------------------------------------
 
@@ -580,9 +584,10 @@ CREATE TABLE `task_user` (
 --
 
 INSERT INTO `task_user` (`assignee_id`, `user_id`, `task_id`, `notes`, `status`, `sequence`, `created_user_id`, `updated_user_id`, `deleted_at`, `created_at`, `updated_at`) VALUES
-(1, 2, 1, 'vắng', 4, NULL, 2, 2, NULL, '2022-03-03 20:22:07', '2022-03-03 23:41:32'),
-(2, 3, 1, NULL, 99, NULL, 3, 3, NULL, '2022-03-03 20:22:07', '2022-03-03 20:22:07'),
-(3, 2, 2, '222222222222222222222', 99, NULL, 2, 2, NULL, '2022-03-03 20:27:17', '2022-03-03 20:27:17');
+(1, 2, 1, 'vắng', 4, NULL, 2, 2, '2022-03-10 00:38:18', '2022-03-03 20:22:07', '2022-03-10 00:38:18'),
+(2, 3, 1, NULL, 99, NULL, 3, 3, '2022-03-10 00:38:18', '2022-03-03 20:22:07', '2022-03-10 00:38:18'),
+(3, 2, 2, '222222222222222222222', 3, NULL, 2, 2, NULL, '2022-03-03 20:27:17', '2022-03-07 02:50:06'),
+(4, 1, 1, NULL, 99, NULL, 1, 1, NULL, '2022-03-10 00:26:42', '2022-03-10 00:26:42');
 
 -- --------------------------------------------------------
 
@@ -645,9 +650,22 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `email`, `user_name`, `password`, `permissions`, `activated`, `banned`, `activation_code`, `activated_at`, `last_login`, `persist_code`, `reset_password_code`, `protected`, `status`, `sequence`, `created_user_id`, `updated_user_id`, `deleted_at`, `created_at`, `updated_at`) VALUES
-(1, 'admin@admin.com', 'admin', '$2y$10$b0spyewY6I3KejkSFKP8jON67EohAocQuc/7DSd.m.0.q3l/zxTGi', NULL, 1, 0, NULL, NULL, '2022-03-03 23:41:02', '$2y$10$8Q3Gq66Xi0xAik0ZYuiyweNlVJTC5pxtoXlQjE8xH.6rbVQFojQ1S', NULL, 0, NULL, NULL, NULL, NULL, NULL, '2022-03-02 02:23:24', '2022-03-03 23:41:02'),
-(2, 'ptnhuan@tdc.edu.vn', NULL, '$2y$10$VFsHXQN01utR3GdH/R..1u8aKGTdG8TcaecsaDzMZtmljHjOR/3gK', NULL, 1, 0, NULL, NULL, '2022-03-03 18:03:33', '$2y$10$rmYsR21EVmdoKZj7Z2Jd9.uceLVsBKIROrrmgQAofwNvRzqO8cKy.', NULL, 0, NULL, NULL, NULL, NULL, NULL, '2022-03-02 02:37:17', '2022-03-03 18:03:33'),
-(3, 'thept@tdc.edu.vn', NULL, '$2y$10$2vCMlwqJFUCVaGYmLe9nW.Rg4VhcmVddQAsOSGhZwGNy/LHkgIxTu', NULL, 1, 0, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, '2022-03-02 02:39:09', '2022-03-02 02:39:09');
+(1, 'ptnhuan@gmail.com', 'ptnhuan', '$2y$10$b0spyewY6I3KejkSFKP8jON67EohAocQuc/7DSd.m.0.q3l/zxTGi', NULL, 1, 0, NULL, NULL, '2022-03-10 00:26:17', '$2y$10$8i0HeACKrlj6C/ERxvIiNeZpzZQBYHQbTdn/vYbJ6YBsi9Y6Zb6zG', NULL, 0, NULL, NULL, NULL, NULL, NULL, '2022-03-02 02:23:24', '2022-03-10 00:26:17'),
+(2, 'ptnhuan@tdc.edu.vn', NULL, '$2y$10$VFsHXQN01utR3GdH/R..1u8aKGTdG8TcaecsaDzMZtmljHjOR/3gK', NULL, 1, 0, NULL, NULL, '2022-03-07 02:49:49', '$2y$10$sv8xOC.pbrJTreQJ7biWou5VVfqvD8jHgSnI1l6RKmBoZ6yxPqW.O', NULL, 0, NULL, NULL, NULL, NULL, NULL, '2022-03-02 02:37:17', '2022-03-07 02:49:49'),
+(3, 'thept@tdc.edu.vn', NULL, '$2y$10$2vCMlwqJFUCVaGYmLe9nW.Rg4VhcmVddQAsOSGhZwGNy/LHkgIxTu', NULL, 1, 0, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, '2022-03-02 02:39:09', '2022-03-02 02:39:09'),
+(4, 'cuongtk@tdc.edu.vn', NULL, '$2y$10$EDLlHy4YZChl2cbmKGe7teOly53FdwaxYvckzsx899q.H7FoyeH.a', NULL, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, '2022-03-07 00:39:13', '2022-03-07 00:39:13'),
+(5, 'hoanghn@tdc.edu.vn', NULL, '$2y$10$Xl8/G8ek2vsCmOEb5GYraumH6zgAcod21wr.Vueu5UVKioNNKRD5.', NULL, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, '2022-03-07 00:39:33', '2022-03-07 00:39:33'),
+(6, 'mynth@tdc.edu.vn', NULL, '$2y$10$8faYCjheaENouUYTqT3HdegZjV4fsoLzOLITtw4Ea35Shrq02SnXa', NULL, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, '2022-03-07 00:39:51', '2022-03-07 00:39:51'),
+(7, 'nguyennh@tdc.edu.vn', NULL, '$2y$10$4EEFUM5Jdyl9MdUy8q1sReWu3dJY5sRNOJEyUb216HQt95VM8xKpa', NULL, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, '2022-03-07 00:40:12', '2022-03-07 00:40:12'),
+(8, 'phuocpg@tdc.edu.vn', NULL, '$2y$10$oQAmoLxgKgkAwyJ967qnPe3KjGXhenxlZPIRmRkBAjiIWhDyr/FVW', NULL, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, '2022-03-07 00:40:34', '2022-03-07 00:40:34'),
+(9, 'thaitb@tdc.edu.vn', NULL, '$2y$10$4JcqGX/jyayHvSC7UsuxzOBnjv7N.ESgnvtGtYjpXZtAb91xhwFPG', NULL, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, '2022-03-07 00:40:51', '2022-03-07 00:40:51'),
+(10, 'thaobtp@tdc.edu.vn', NULL, '$2y$10$/SSW6jtWU3mEFyU2SVyvQeXUvq7wKQPgH7h5MgevfIubfhOcSysrO', NULL, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, '2022-03-07 00:41:10', '2022-03-07 00:41:10'),
+(11, 'thol@tdc.edu.vn', NULL, '$2y$10$/heXwIExZ1dPLIamv8CyEeGk3KcYiqMktFM4VzjUu9z9WpfnOg5LO', NULL, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, '2022-03-07 00:41:29', '2022-03-07 00:41:29'),
+(12, 'thuyhtp@tdc.edu.vn', NULL, '$2y$10$jCL9Zb/N1MYi8cFZKtgkgOTvJraX68tQxyTm/ZWAm0kDfYQlbnRjS', NULL, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, '2022-03-07 00:41:44', '2022-03-07 00:41:44'),
+(13, 'thunma@tdc.edu.vn', NULL, '$2y$10$EitOe.xDU3x.LXpA8uGmYewHcGR3m1Y29s6t7ExaLFv4gJDS/mhgG', NULL, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, '2022-03-07 00:42:00', '2022-03-07 00:42:00'),
+(14, 'tuyenmk@tdc.edu.vn', NULL, '$2y$10$P..L0Um7EEIRvDtRU6yDrexa4wTk7Q0eikI5exmnMBDq9vId/HlWC', NULL, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, '2022-03-07 00:42:19', '2022-03-07 00:42:19'),
+(15, 'trinhhc@tdc.edu.vn', NULL, '$2y$10$o7a..BewGDIpqbg4gQPxOOC86lKFPypsHozRMlgXNlxknIMpqPvZ.', NULL, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, '2022-03-07 00:42:35', '2022-03-07 00:42:35'),
+(16, 'trinhpt@tdc.edu.vn', NULL, '$2y$10$JiOQRPn9HSk6izYsYhyiWe8EdPygz9otv1.ka21STHVqxmdQORnla', NULL, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, '2022-03-07 00:42:56', '2022-03-07 00:42:56');
 
 -- --------------------------------------------------------
 
@@ -713,9 +731,22 @@ CREATE TABLE `user_profile` (
 --
 
 INSERT INTO `user_profile` (`id`, `user_id`, `first_name`, `last_name`, `phone`, `device_token`, `category_id`, `level_id`, `avatar`, `code`, `vat`, `state`, `city`, `country`, `sex`, `address`, `status`, `sequence`, `created_user_id`, `updated_user_id`, `deleted_at`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Admin', 'System', NULL, '1111345345345', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, '2022-03-02 02:23:25', '2022-03-02 22:26:18'),
-(2, 2, 'Phan Thanh', 'Nhuần', NULL, 'wwwwwwwwasdf asdfa sdfasdf', NULL, 2, NULL, 'admin', NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, '2022-03-02 02:37:17', '2022-03-02 19:48:21'),
-(3, 3, 'Phan Thị', 'Thể', NULL, NULL, NULL, 2, NULL, 'thept@tdc.edu.vn', NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, '2022-03-02 02:39:09', '2022-03-02 02:39:26');
+(1, 1, 'Admin', 'System', NULL, 'eow6lTobRh-ScVfa_ZRIhv:APA91bGuGqZ3X9B1yUSTKmkl8FZb483WBnHkDUb3iymMkPsgzxry1QTt8upSPg61NHmBG8Jfs_Q-kL6Uej_57lrZl4ekE6nr6ZQPriz5jGpIqt_EpEiAD_MSZCjPzJY2SAjisnUpGaf8', NULL, 2, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, '2022-03-02 02:23:25', '2022-03-02 22:26:18'),
+(2, 2, 'Phan Thanh', 'Nhuần', NULL, 'eow6lTobRh-ScVfa_ZRIhv:APA91bGuGqZ3X9B1yUSTKmkl8FZb483WBnHkDUb3iymMkPsgzxry1QTt8upSPg61NHmBG8Jfs_Q-kL6Uej_57lrZl4ekE6nr6ZQPriz5jGpIqt_EpEiAD_MSZCjPzJY2SAjisnUpGaf8', NULL, 2, NULL, 'admin', NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, '2022-03-02 02:37:17', '2022-03-02 19:48:21'),
+(3, 3, 'Phan Thị', 'Thể', NULL, 'eow6lTobRh-ScVfa_ZRIhv:APA91bGuGqZ3X9B1yUSTKmkl8FZb483WBnHkDUb3iymMkPsgzxry1QTt8upSPg61NHmBG8Jfs_Q-kL6Uej_57lrZl4ekE6nr6ZQPriz5jGpIqt_EpEiAD_MSZCjPzJY2SAjisnUpGaf8', NULL, 2, NULL, 'thept@tdc.edu.vn', NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, '2022-03-02 02:39:09', '2022-03-02 02:39:26'),
+(4, 4, 'Tiêu Kim', 'Cương', NULL, NULL, NULL, 2, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, '2022-03-07 00:39:13', '2022-03-07 00:39:13'),
+(5, 5, 'Nguyễn Huy', 'Hoàng', NULL, NULL, NULL, 2, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, '2022-03-07 00:39:33', '2022-03-07 00:39:33'),
+(6, 6, 'Nguyễn Thị Hồng', 'Mỹ', NULL, NULL, NULL, 2, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, '2022-03-07 00:39:51', '2022-03-07 00:39:51'),
+(7, 7, 'Nguyễn Hoàng', 'Nguyên', NULL, NULL, NULL, 2, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, '2022-03-07 00:40:12', '2022-03-07 00:40:12'),
+(8, 8, 'Phan Gia', 'Phước', NULL, NULL, NULL, 2, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, '2022-03-07 00:40:34', '2022-03-07 00:40:34'),
+(9, 9, 'Trương Bá', 'Thái', NULL, NULL, NULL, 2, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, '2022-03-07 00:40:51', '2022-03-07 00:40:51'),
+(10, 10, 'Bùi Thị Phương', 'Thảo', NULL, NULL, NULL, 2, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, '2022-03-07 00:41:10', '2022-03-07 00:41:10'),
+(11, 11, 'Lê', 'Thọ', NULL, NULL, NULL, 2, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, '2022-03-07 00:41:29', '2022-03-07 00:41:29'),
+(12, 12, 'Huỳnh Thị Phương', 'Thủy', NULL, NULL, NULL, 2, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, '2022-03-07 00:41:44', '2022-03-07 00:41:44'),
+(13, 13, 'Ngô Minh Anh', 'Thư', NULL, NULL, NULL, 2, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, '2022-03-07 00:42:00', '2022-03-07 00:42:00'),
+(14, 14, 'Mai Kỷ', 'Tuyên', NULL, NULL, NULL, 2, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, '2022-03-07 00:42:19', '2022-03-07 00:42:19'),
+(15, 15, 'Hoàng Công', 'Trình', NULL, NULL, NULL, 2, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, '2022-03-07 00:42:35', '2022-03-07 00:42:35'),
+(16, 16, 'Phan Thị', 'Trinh', NULL, NULL, NULL, 2, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, '2022-03-07 00:42:56', '2022-03-07 00:42:56');
 
 --
 -- Indexes for dumped tables
@@ -986,13 +1017,13 @@ ALTER TABLE `slideshow_styles`
 -- AUTO_INCREMENT for table `tasks`
 --
 ALTER TABLE `tasks`
-  MODIFY `task_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Primary key', AUTO_INCREMENT=3;
+  MODIFY `task_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Primary key', AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `task_user`
 --
 ALTER TABLE `task_user`
-  MODIFY `assignee_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Primary key', AUTO_INCREMENT=4;
+  MODIFY `assignee_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Primary key', AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `throttle`
@@ -1004,13 +1035,13 @@ ALTER TABLE `throttle`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'User id', AUTO_INCREMENT=4;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'User id', AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `user_profile`
 --
 ALTER TABLE `user_profile`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- Constraints for dumped tables
